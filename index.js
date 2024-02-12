@@ -37,6 +37,10 @@ function encryptContent() {
 }
 
 function decryptContent() {
+  if (currentValue.length === 0) {
+    currentValue = document.getElementById("text-content").value;
+  }
+
   let decryptContent = currentValue;
 
   oldValues.forEach((word, index) => {
